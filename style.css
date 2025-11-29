@@ -1,0 +1,47 @@
+/* General dark theme */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0b1221;
+    color: white;
+}
+
+/* Cover page styling */
+.cover-page {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-container {
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.cover-container h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.start-btn {
+    margin-top: 25px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: linear-gradient(to right, #ff9a00, #ff3d00);
+    color: white;
+    transition: 0.2s;
+}
+
+.start-btn:hover {
+    transform: scale(1.06);
+}
+
+/* You can keep/add your quiz styles here */

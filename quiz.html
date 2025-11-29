@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Movie Guessing Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 id="headerTitle">🎬 Poster Movie Guessing — Kannada / Hindi / Telugu</h1>
+        <p id="headerNote">
+            15 seconds per movie. If your guess is incorrect, the correct answer will be shown immediately.
+        </p>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat"><div class="label">Score</div><div id="score">0</div></div>
+            <div class="stat"><div class="label">Streak</div><div id="streak">0</div></div>
+            <div class="stat"><div class="label">Attempts</div><div id="attempts">0</div></div>
+        </div>
+
+        <!-- Game area -->
+        <div class="game-area">
+
+            <div class="poster-section">
+                <div id="poster" class="poster">🎬</div>
+                <div id="posterSub" class="poster-sub">Emoji poster — guess the movie</div>
+            </div>
+
+            <div class="guess-section">
+                <label>Your guess</label>
+                <input id="guessInput" type="text" placeholder="Type movie title (e.g., KGF / Baahubali)">
+                
+                <!-- Timer -->
+                <div class="timer">
+                    <span id="timeLeft">15s</span>
+                    <div class="bar">
+                        <div id="timeFill"></div>
+                    </div>
+                </div>
+
+                <div class="btn-row">
+                    <button id="guessBtn" class="btn primary">Submit Guess</button>
+                    <button id="revealBtn" class="btn">Reveal</button>
+                    <button id="nextBtn" class="btn">Next ▶</button>
+                    <button id="shuffleBtn" class="btn">🔀 Shuffle</button>
+                </div>
+
+                <div id="feedbackArea" class="feedback"></div>
+
+                <p class="info">
+                    Matches are case-insensitive. English transliterations (KGF, Baahubali, RRR, etc.) are accepted.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- ▼ Movie list -->
+        <details class="list-box">
+            <summary>Show movie list (emoji poster → title → language)</summary>
+            <div id="movieList" class="movie-list"></div>
+        </details>
+
+    </div>
+
+    <!-- Load JavaScript -->
+    <script src="quiz.js"></script>
+</body>
+</html>
