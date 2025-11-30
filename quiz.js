@@ -265,8 +265,7 @@ const revealBtn = document.getElementById('revealBtn');
 const feedbackArea = document.getElementById('feedbackArea');
 const timeLeftEl = document.getElementById('timeLeft');
 const timeFillEl = document.getElementById('timeFill');
-const startButton = document.getElementById('startButton');
-const coverPage = document.getElementById('coverPage');
+// Removed startButton and coverPage references for cleanup
 const quizContainer = document.getElementById('quizContainer');
 const movieListEl = document.getElementById('movieList');
 
@@ -314,9 +313,15 @@ function updateRoundTracker() {
 }
 
 /** Renders the multiple choice buttons dynamically. */
-function renderOptions(options) {
+function renderOptions() {
     optionsContainer.innerHTML = '';
     
+    // Check if we have enough movies to run the quiz
+    if (MOVIE_POSTERS.length < 4) {
+        optionsContainer.innerHTML = '<p style="color:var(--color-error); text-align:center;">Need at least 4 unique movies to generate options!</p>';
+        return;
+    }
+
     // Get the correct movie title and all other movie titles for incorrect options
     const correctTitle = currentMovie.correct;
     const allTitles = MOVIE_POSTERS.map(m => m.correct);
@@ -337,7 +342,7 @@ function renderOptions(options) {
         button.className = 'option-btn';
         button.textContent = optionText;
         button.dataset.answer = optionText;
-        button.dataset.index = index; // Used only for styling A, B, C, D if needed
+        button.dataset.index = index; 
 
         // Event listener for the user's guess
         button.addEventListener('click', () => handleGuess(optionText));
@@ -406,7 +411,6 @@ function handleTimeout() {
     streak = 0;
     updateStats();
     
-    // Visually show the correct answer
     showResult(false);
 
     feedbackArea.className = 'feedback incorrect';
@@ -441,6 +445,14 @@ function loadQuestion() {
 
     // 2. Display the poster image
     posterEl.innerHTML = '';
+    
+    // Handle the case where the MOVIE_POSTERS array is empty
+    if (!currentMovie || !currentMovie.url) {
+        posterEl.innerHTML = '<span style="font-size: 1rem;">No movie data loaded. Please check MOVIE_POSTERS array.</span>';
+        posterSubEl.textContent = 'Data Missing';
+        return;
+    }
+    
     const img = document.createElement('img');
     img.src = currentMovie.url;
     img.alt = `Poster for ${currentMovie.correct}`;
@@ -450,7 +462,7 @@ function loadQuestion() {
     img.onerror = function() {
         console.error("❌ IMAGE LOAD FAILED! Check the URL:", currentMovie.url);
         // Fallback to text/emoji if image fails
-        posterEl.innerHTML = '<span style="font-size: 8rem;">❓</span>';
+        posterEl.innerHTML = '<span style="font-size: 8rem;">⚠️</span>';
         posterSubEl.textContent = 'Image failed to load. Check your URL in the console.';
     };
 
@@ -458,7 +470,7 @@ function loadQuestion() {
     posterSubEl.textContent = `Language: ${currentMovie.lang}`;
 
     // 3. Render the options and start the timer
-    renderOptions(currentMovie.options);
+    renderOptions(); // Removed unnecessary argument
     startTimer();
 }
 
@@ -466,7 +478,6 @@ function loadQuestion() {
 function handleGuess(guessedTitle) {
     stopTimer(false);
 
-    // Disable all options immediately after a guess
     toggleOptions(false);
     
     const isCorrect = (guessedTitle.toLowerCase() === currentMovie.correct.toLowerCase());
@@ -484,7 +495,6 @@ function handleGuess(guessedTitle) {
         feedbackArea.innerHTML = `❌ Incorrect. The correct film was <strong>${currentMovie.correct}</strong>.`;
     }
 
-    // Visually show the result (highlight correct/incorrect)
     showResult(isCorrect, guessedTitle);
     
     updateStats();
@@ -561,17 +571,12 @@ function populateMovieList() {
 /** Initializes the application after the document loads. */
 function initApp() {
     populateMovieList();
-
-    // 1. Cover Page / Start Button Logic
-    startButton.addEventListener('click', () => {
-        // Hide the cover page
-        coverPage.classList.add('hidden');
-        // Show the quiz container
-        quizContainer.classList.remove('hidden'); 
-        
-        gameActive = true;
-        resetGame(); // Start the first round
-    });
+    
+    // --- IMMEDIATE START LOGIC (Replaces cover page logic) ---
+    // Start the game immediately when the page loads, as requested.
+    gameActive = true;
+    resetGame();
+    // --------------------------------------------------------
 
     // 2. Quiz Controls
     nextBtn.addEventListener('click', () => {
@@ -586,4 +591,4 @@ function initApp() {
 }
 
 // Ensure the app starts when the page structure is ready
-document.addEventListener('DOMContentLoaded', initApp)
+document.addEventListener('DOMContentLoaded', initApp);
