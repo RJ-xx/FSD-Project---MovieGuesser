@@ -1,12 +1,12 @@
 const MOVIE_POSTERS = [
-    { poster: "🐘👑⚔️", correct: "Baahubali", options: ["Baahubali", "RRR", "KGF", "Pushpa"], lang: "Telugu / Tamil" },
-    { poster: "⛏️🪙🏍️", correct: "KGF", options: ["KGF", "Sholay", "Gadar", "Dhoom"], lang: "Kannada" },
-    { poster: "🌊🔥👬", correct: "RRR", options: ["Dangal", "Pathaan", "RRR", "Robot"], lang: "Telugu" },
-    { poster: "🚀🧑‍🚀🌕", correct: "Mission Mangal", options: ["Koi Mil Gaya", "Mission Mangal", "Interstellar", "Space Odyssey"], lang: "Hindi" },
-    { poster: "🔪👨‍👧‍👦", correct: "Drishyam", options: ["Drishyam", "Piku", "Kabir Singh", "War"], lang: "Hindi / Malayalam" },
-    { poster: "🥊🐅", correct: "Sultan", options: ["Sultan", "Lagaan", "Bhaag Milkha Bhaag", "Dangal"], lang: "Hindi" },
-    { poster: "🚂🏡", correct: "Chennai Express", options: ["Dilwale", "Chennai Express", "Kal Ho Naa Ho", "Swades"], lang: "Hindi" },
-    { poster: "🏏🇮🇳", correct: "Lagaan", options: ["MS Dhoni", "Lagaan", "83", "Jersy"], lang: "Hindi" },
+    { url: "https://placehold.co/400x600/2a2a2a/ff9a00?text=Baahubali", correct: "Baahubali", options: ["Baahubali", "RRR", "KGF", "Pushpa"], lang: "Telugu / Tamil" },
+    { url: "https://placehold.co/400x600/2a2a2a/ff9a00?text=KGF", correct: "KGF", options: ["KGF", "Sholay", "Gadar", "Dhoom"], lang: "Kannada" },
+    { url: "https://placehold.co/400x600/2a2a2a/ff9a00?text=RRR", correct: "RRR", options: ["Dangal", "Pathaan", "RRR", "Robot"], lang: "Telugu" },
+    { url: "https://placehold.co/400x600/2a2a2a/ff9a00?text=Mission+Mangal", correct: "Mission Mangal", options: ["Koi Mil Gaya", "Mission Mangal", "Interstellar", "Space Odyssey"], lang: "Hindi" },
+    { url: "https://placehold.co/400x600/2a2a2a/ff9a00?text=Drishyam", correct: "Drishyam", options: ["Drishyam", "Piku", "Kabir Singh", "War"], lang: "Hindi / Malayalam" },
+    { url: "https://placehold.co/400x600/2a2a2a/ff9a00?text=Sultan", correct: "Sultan", options: ["Sultan", "Lagaan", "Bhaag Milkha Bhaag", "Dangal"], lang: "Hindi" },
+    { url: "https://placehold.co/400x600/2a2a2a/ff9a00?text=Chennai+Express", correct: "Chennai Express", options: ["Dilwale", "Chennai Express", "Kal Ho Naa Ho", "Swades"], lang: "Hindi" },
+    { url: "https://placehold.co/400x600/2a2a2a/ff9a00?text=Lagaan", correct: "Lagaan", options: ["MS Dhoni", "Lagaan", "83", "Jersy"], lang: "Hindi" },
 ];
 
 // --- 2. DOM ELEMENTS & GAME STATE ---
@@ -50,7 +50,7 @@ function updateStats() {
 /** Pre-populates the movie list in the <details> section. */
 function populateMovieList() {
     movieListEl.innerHTML = MOVIE_POSTERS.map(movie => 
-        `<div>${movie.poster} &rarr; <strong>${movie.correct}</strong> (${movie.lang})</div>`
+        `<div>${movie.poster} (${movie.lang}</strong> (${movie.lang})</div>`
     ).join('');
 }
 
@@ -163,7 +163,7 @@ function loadQuestion() {
     currentMovie = availableMovies[index];
     availableMovies.splice(index, 1);
     
-    posterEl.textContent = currentMovie.poster;
+    posterEl.innerHTML = <img src="${currentMovie.url}" alt="Movie Poster" class="actual-poster">;
     posterSubEl.textContent = `Language: ${currentMovie.lang}`;
     
     renderOptions();
