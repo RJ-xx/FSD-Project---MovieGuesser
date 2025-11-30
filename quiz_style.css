@@ -164,10 +164,22 @@ body {
 }
 
 #poster {
-    font-size: 10rem; /* Large emoji */
     line-height: 1;
     margin-bottom: 10px;
-    min-height: 200px; /* Ensure space for the large emoji */
+    min-height: 200px; /* Placeholder height for poster image */
+    width:100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.actual-poster {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Give the poster image rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add a nice shadow */
+    object-fit: contain; /* Ensures the whole poster is visible */
+    max-height: 45vh; /* Responsive height limit */
 }
 
 .poster-sub {
