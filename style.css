@@ -1,9 +1,14 @@
 /* General dark theme */
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #0b1221;
-    color: white;
+    padding: 0;
+    background: #111;              /* optional aesthetic */
+    color: #fff;                   /* optional */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;       /* center left-right */
+    align-items: flex-start;       /* top alignment (change to center if you want vertical centering) */
+    min-height: 100vh;
 }
 
 /* Cover page styling */
