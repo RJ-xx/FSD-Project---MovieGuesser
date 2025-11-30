@@ -249,6 +249,278 @@ const MOVIE_POSTERS = [
         url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/MOM.png", 
         correct: "MOM", 
         lang: "Hindi" 
+    },
+    
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Mad%20Max.jpg",
+        correct:"Mad Max",
+        lang:"English"
+    },
+
+   {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Maghadeera.jpg",
+        correct:"Maghadeera",
+        lang:"Telugu"
+   },
+
+   {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Milana.jpg",
+        correct:"Milana",
+        lang:"Kannada"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Mother%20India.jpg",
+        correct:"Mother India",
+        lang:"Hindi"
+   },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Mr%20India.jpg",
+        correct:"Mr India",
+        lang:"Hindi"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Mr%20Perfect.jpg",
+        correct:"Mr Perfect",
+        lang:"Telugu"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Mungaru%20Male.jpg",
+        correct:"Mungaru Male",
+        lang:"Kannada"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Om%20Shanti%20Om.jpg",
+        correct:"Om Shanti Om",
+        lang:"Hindi"
+   },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Pushpa.jpg",
+        correct:"Pushpa",
+        lang:"Telugu"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/RRR.jpg",
+        correct:"RRR",
+        lang:"Telugu"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Race%20Gurram.jpg",
+        correct:"Race Gurram",
+        lang:"Telugu"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Rajakumara.jpg",
+        correct:"Rajakumara",
+        lang:"Kannada"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Rama%20Shama%20Bhama.jpg",
+        correct:"Rama Shama Bhama",
+        lang:"Kannada"
+   },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Ramachari.jpg",
+        correct:"Mr & Mrs.Ramachari",
+        lang:"Kannada"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Rampage.jpg",
+        correct:"Rampage",
+        lang:"English"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Rangasthalam.jpg",
+        correct:"Rangasthalam",
+        lang:"Telugu"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Rangi%20Taranga.jpg",
+        correct:"Rangi Taranga",
+        lang:"Kannada" 
+    },
+
+    {  
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Ranna.jpg",
+        correct:"Ranna",
+        lang:"Kannada"
+    },
+
+    {  
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Secret%20Superstar.jpg",
+        correct:"Secret Superstar",
+        lang:"Hindi"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Seethamma%20Vakitlo%20Sirimalle%20Chettu.jpg",
+        correct:"Seethamma Vakitlo Sirimalle Chettu",
+        lang:"Telugu"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Sholay.webp",
+        correct:"Sholay",
+        lang:"Hindi"
+    },
+
+    { 
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/SlumpDog%20Millionaire%20.jpg",
+        correct:"Slumdog Millionaire",
+        lang:"English"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Spider%20Man%20Homecommig.jpg",
+        correct:"SpiderMan Homecoming",
+        lang:"English"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Spider%20man%20No%20way%20home.jpg",
+        correct:"SpiderMan No Way Home",
+        lang:"English"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/SpiderMan%20Far%20from%20home.png",
+        correct:"SpiderMan Far From Home",
+        lang:"English"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Stranger%20things.jpg",
+        correct:"Stranger Things",
+        lang:"English"
+   },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Swades.jpg",
+        correct:"Swades",
+        lang:"Hindi"
+    },
+
+    {  
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Tagaru.jpg",
+        correct:"Tagaru",
+        lang:"Kannada"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Tara%20zameen%20par.jpg",
+        correct:"Tara zameen par",
+        lang:"Hindi"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Thaapad.jpg",
+        correct:"Thaapad",
+        lang:"Hindi"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/The%20Dictator.jpg",
+        correct:"The Dictator",
+        lang:"English"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/The%20Karate%20Kid.jpg",
+        correct:"The Karate Kid",
+        lang:"English"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Tiger%20Zinda%20Hai.jpg",
+        correct:"Tiger Zinda Hai",
+        lang:"Hindi"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Titanic.jpg",
+        correct:"Titanic",
+        lang:"English"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/U%20turn.jpg",
+        correct:"U turn",
+        lang:"Kannada"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/UI.jpg",
+        correct:"UI",
+        lang:"Kannada"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Vikrant%20Rona.jpg",
+        correct:"Vikrant Rona",
+        lang:"Kannada"
+    },
+
+   {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Wonder%20Women.jpg",
+        correct:"Wonder Woman 1984",
+        lang:"English"
+    },
+
+   {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Yed%20Zindagi%20Na%20Milege%20Dobara.jpg",
+        correct:"Zindagi Na Milegi Dobara", 
+        lang:"Hindi"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Yeh%20Jawani%20Hai%20Dewani.jpg",
+        correct:"Yeh Jawaani Hai Deewani",
+        lang:"Hindi"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/bahubali%202.png",
+        correct:"Bahubali 2",
+        lang:"Telugu"
+    },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/ega.jpg",
+        correct:"Eega",
+        lang:"Telugu"
+   },
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/seyra%20Narsimha%20Reddy.jpg",
+        correct:"Sye Raa Narasimha Reddy",
+        lang:"Telugu"
+    },
+
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/son%20of%20satyamuthy.jpeg",
+        correct:"Son Of Satyamuthy",
+        lang:"Telugu"
+    },
+
+
+    {
+        url:"https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/three%20idiots.jpg",
+        correct:"Three Idiots",
+        lang:"Hindi"
     }
 ];
 
