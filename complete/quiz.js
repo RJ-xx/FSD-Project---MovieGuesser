@@ -6,7 +6,8 @@ const MOVIE_POSTERS = [
     },
     
     { 
-        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Amar%20Akbar%20Anthony.jpg"
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Amar%20Akbar%20Anthony.jpg",
+        correct: "Amar Akbar Anthony",
         lang: "Hindi" 
     },
     
@@ -167,7 +168,7 @@ const MOVIE_POSTERS = [
     },
     
     { 
-        url: "hhttps://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Hangover.jpg", 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Hangover.jpg", 
         correct: "The Hangover", 
         lang: "English" 
     },
@@ -248,9 +249,7 @@ const MOVIE_POSTERS = [
         url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/MOM.png", 
         correct: "MOM", 
         lang: "Hindi" 
-    },
-    
-    
+    }
 ];
 
 // --- 2. DOM ELEMENTS & GAME STATE ---
@@ -268,6 +267,8 @@ const timeFillEl = document.getElementById('timeFill');
 // Removed startButton and coverPage references for cleanup
 const quizContainer = document.getElementById('quizContainer');
 const movieListEl = document.getElementById('movieList');
+const startButton = document.getElementById('startButton');
+const coverPage = document.getElementById('coverPage');
 
 let currentMovie = null;
 let currentMovieIndex = -1;
@@ -277,7 +278,7 @@ let attempts = 0;
 let timeLimit = 15; // seconds
 let timer = null;
 let gameActive = false;
-const MAX_ROUNDS = 5; // Total rounds to play
+const MAX_ROUNDS = 10; // Total rounds to play
 let currentRound = 0;
 
 // --- 3. HELPER FUNCTIONS ---
@@ -571,6 +572,21 @@ function populateMovieList() {
 /** Initializes the application after the document loads. */
 function initApp() {
     populateMovieList();
+
+    startButton.addEventListener('click', startGame);
+
+    // 2. Quiz Controls
+    nextBtn.addEventListener('click', () => {
+        // ... (existing next button logic) ...
+    });
+    
+    revealBtn.addEventListener('click', handleReveal);
+}
+
+// 🌟 NEW FUNCTION TO START THE GAME 🌟
+function startGame() {
+    coverPage.classList.add('hidden'); // Hide the cover page
+    quizContainer.classList.add('active');
     
     // --- IMMEDIATE START LOGIC (Replaces cover page logic) ---
     // Start the game immediately when the page loads, as requested.

@@ -33,33 +33,108 @@ body {
     width: 100%;
     justify-content: center;
     align-items: center;
-    background: rgba(17, 17, 17, 0.98);
+    background: url('cinema-bg.jpg') no-repeat center center / cover;
     z-index: 100;
+}
+.quiz-app-layout {
+    /* ... existing styles ... */
+    visibility: hidden; /* New: Hide until start */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.quiz-app-layout.active {
+    visibility: visible;
+    opacity: 1;
 }
 
 .cover-page.hidden { display: none; }
 
+.cover-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent overlay */
+    z-index: 99;
+}
 .cover-container {
+   z-index: 101; /* Must be above the overlay (z-index: 99) */
     text-align: center;
-    padding: 40px;
+    padding: 40px 60px;
     border-radius: var(--border-radius);
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    /* Remove blur/shadow if you want a cleaner look over the background image */
+    background: transparent;
 }
 
-.cover-container h1 { font-size: 2.4rem; margin-bottom: 10px; }
+.cover-title {
+    font-size: 5rem; /* Make it HUGE */
+    color: yellow; /* Use a distinct, bright color */
+    text-shadow: 4px 4px 0px var(--color-primary); /* Gives it a movie-poster feel */
+    margin-bottom: 5px;
+}
+
+.cover-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+}
+
+.rating-stars {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+}
+
+.cover-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
 
 .start-btn {
-    margin-top: 25px;
-    padding: 12px 30px;
+    padding: 15px 40px;
     font-size: 1.2rem;
-    border: none;
-    border-radius: var(--border-radius);
+    font-weight: bold;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
     cursor: pointer;
-    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
-    color: white;
-    transition: 0.2s;
+}
+
+.start-btn.primary {
+    background: var(--color-primary);
+    color: var(--color-bg-dark);
+}
+.start-btn.secondary {
+    background: transparent;
+    color: var(--color-primary);
+}
+
+.cover-stats-footer {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+.cover-stats-footer .stat {
+    text-align: center;
+}
+.cover-stats-footer .icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+.cover-stats-footer .value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-top: 5px;
+}
+
+/* Hide the cover page when the game starts */
+.cover-page.hidden { 
+    display: none; 
 }
 
 .start-btn:hover { transform: scale(1.06); }
@@ -156,7 +231,7 @@ body {
     border-radius: var(--border-radius);
     padding: 30px;
     text-align: center;
-    min-height: 400px; /* Placeholder minimum height */
+    min-height: 500px; /* Placeholder minimum height */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -166,9 +241,9 @@ body {
 #poster {
     line-height: 1;
     margin-bottom: 10px;
-    min-height: 200px; /* Placeholder height for poster image */
+    min-height: 400px; /* Placeholder height for poster image */
     width:100%;
-    max-width: 300px;
+    max-width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,7 +254,8 @@ body {
     border-radius: 8px; /* Give the poster image rounded corners */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add a nice shadow */
     object-fit: contain; /* Ensures the whole poster is visible */
-    max-height: 45vh; /* Responsive height limit */
+    max-height: 200vh;
+    max-width: 900px;
 }
 
 .poster-sub {
@@ -217,7 +293,7 @@ body {
 
 #timeFill {
     height: 100%;
-    width: 100%; /* JS will control this */
+    width: 100%; 
     background: linear-gradient(to right, var(--color-success), var(--color-secondary));
     border-radius: 5px;
     transition: width 0.1s linear;
