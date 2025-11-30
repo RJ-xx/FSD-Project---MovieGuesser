@@ -1,33 +1,264 @@
 const MOVIE_POSTERS = [
     { 
-        url: "https://your-image-host.com/path/to/poster/your_movie_1.jpg", 
-        correct: "Your Movie Title 1", 
-        lang: "Film Language (e.g., Hindi)" 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/8ff1ee46af3eeb9b4c50a155bed315ff97902ea3/assets/posters/777%20Charlie.jpg", 
+        correct: "777 Charlie", 
+        lang: "Kannada" 
     },
     
     { 
-        url: "https://another-host.io/posters/your_movie_2.jpg", 
-        correct: "Your Movie Title 2", 
-        lang: "Film Language (e.g., Telugu)" 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Amar%20Akbar%20Anthony.jpg"
+        lang: "Hindi" 
     },
     
     { 
-        url: "https://last-host.net/posters/your_movie_50.jpg", 
-        correct: "Your Movie Title 50", 
-        lang: "Film Language (e.g., Kannada)" 
-    }
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Apthamitra.jpg", 
+        correct: "Apthamitra", 
+        lang: "Kannada" 
+    },
+
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Arudhati.jpg", 
+        correct: "Arundhati", 
+        lang: "Telugu" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/8ff1ee46af3eeb9b4c50a155bed315ff97902ea3/assets/Arya%202.jpg", 
+        correct: "Arya 2", 
+        lang: "Telugu" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Avane%20Srimannarayana.jpg", 
+        correct: "Avane Srimannarayana", 
+        lang: "Kannada" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Avengers%20EndGame.jpg", 
+        correct: "Avengers: Endgame", 
+        lang: "English" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Bad%20Boys%20for%20Life.jpg", 
+        correct: "Bad Boys for Life", 
+        lang: "English" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Bahubali%201.jpeg", 
+        correct: "Baahubali 1: The Beginning", 
+        lang: "Telugu" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Bell%20Bottom.jpg", 
+        correct: "Bell Bottom", 
+        lang: "Kannada" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Bhaag%20Milka%20Bhaag.jpg", 
+        correct: "Bhaag Milkha Bhaag", 
+        lang: "Hindi" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/BhadriNath.jpg", 
+        correct: "Badrinath", 
+        lang: "Telugu" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Bharat%20Anne%20Nenu.jpg", 
+        correct: "Bharat Ane Nenu", 
+        lang: "Telugu" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Caribbean%20The%20Curse%20of%20the%20Black%20Pearl.jpg", 
+        correct: "Pirates of the Caribbean: The Curse of the Black Pearl", 
+        lang: "English" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Chak%20De%20India.jpg", 
+        correct: "Chak De! India", 
+        lang: "Hindi" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Chatrapati.jpg", 
+        correct: "Chatrapathi", 
+        lang: "Telugu" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Dabaang.jpg", 
+        correct: "Dabangg", 
+        lang: "Hindi" 
+    },
+
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Devdas.jpg", 
+        correct: "Devdas", 
+        lang: "Hindi" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Dhoom%202.jpg", 
+        correct: "Dhoom 2", 
+        lang: "Hindi" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Dil%20To%20Pagal%20Hai.jpg", 
+        correct: "Dil To Pagal Hai", 
+        lang: "Hindi" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Dilwale%20Dulhania%20Lejainge.jpg", 
+        correct: "Dilwale Dulhania Le Jayenge", 
+        lang: "Hindi" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Dookudu.jpg", 
+        correct: "Dookudu", 
+        lang: "Telugu" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Dune.jpg", 
+        correct: "Dune", 
+        lang: "English" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/English%20Vinglish.jpg", 
+        correct: "English Vinglish", 
+        lang: "Hindi" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Gabbar%20Singh.jpg", 
+        correct: "Gabbar Singh", 
+        lang: "Telugu" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Galipata.jpg", 
+        correct: "Gaalipata", 
+        lang: "Kannada" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Gangubai%20Kathaiwadi.jpg", 
+        correct: "Gangubai Kathiawadi", 
+        lang: "Hindi" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Golmal.jpg", 
+        correct: "Golmaal", 
+        lang: "Hindi" 
+    },
+    
+    { 
+        url: "hhttps://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Hangover.jpg", 
+        correct: "The Hangover", 
+        lang: "English" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Jab%20We%20Met.jpg", 
+        correct: "Jab We Met", 
+        lang: "Hindi" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Jhoda%20Akbar.jpg", 
+        correct: "Jodhaa Akbar", 
+        lang: "Hindi" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/John%20Wick.jpg", 
+        correct: "John Wick", 
+        lang: "English" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Jumanji.jpeg", 
+        correct: "Jumanji", 
+        lang: "English" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/KGF1.jpg", 
+        correct: "KGF Chapter 1", 
+        lang: "Kannada" 
+    },
+
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/KGF2.jpg", 
+        correct: "KGF Chapter 2", 
+        lang: "Kannada" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Kabhi%20Khusi%20Khabi%20Gham.jpg", 
+        correct: "Kabhi Khushi Kabhie Gham", 
+        lang: "Hindi" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Kantara%20.jpg", 
+        correct: "Kantara", 
+        lang: "Kannada" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Kantara%20chap%201.jpg", 
+        correct: "Kantara: A Legend Chapter-1", 
+        lang: "Kannada" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Kirik%20Party.jpg", 
+        correct: "Kirik Party", 
+        lang: "Kannada" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Lagaan.jpg", 
+        correct: "Lagaan", 
+        lang: "Hindi" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/Kuch%20Kuch%20Hota%20Hai.jpg", 
+        correct: "Kuch Kuch Hota Hai", 
+        lang: "Hindi" 
+    },
+    
+    { 
+        url: "https://raw.githubusercontent.com/RJ-xx/FSD-Project---Movie-Posters/main/assets/posters/MOM.png", 
+        correct: "MOM", 
+        lang: "Hindi" 
+    },
+    
     
 ];
 
 // --- 2. DOM ELEMENTS & GAME STATE ---
-const NUM_ROUNDS = 5;
-const timeLimit = 15; // seconds
-
 const posterEl = document.getElementById('poster');
 const posterSubEl = document.getElementById('posterSub');
 const scoreEl = document.getElementById('score');
-const streakEl = document.getElementById('streak');
 const attemptsEl = document.getElementById('attempts');
+const streakEl = document.getElementById('streak');
 const optionsContainer = document.getElementById('optionsContainer');
 const nextBtn = document.getElementById('nextBtn');
 const revealBtn = document.getElementById('revealBtn');
@@ -36,27 +267,28 @@ const timeLeftEl = document.getElementById('timeLeft');
 const timeFillEl = document.getElementById('timeFill');
 const startButton = document.getElementById('startButton');
 const coverPage = document.getElementById('coverPage');
+const quizContainer = document.getElementById('quizContainer');
 const movieListEl = document.getElementById('movieList');
-const roundCircles = document.querySelectorAll('.round-circles .circle');
 
-let availableMovies = [...MOVIE_POSTERS];
 let currentMovie = null;
+let currentMovieIndex = -1;
 let score = 0;
 let streak = 0;
 let attempts = 0;
-let round = 0;
+let timeLimit = 15; // seconds
 let timer = null;
-let questionAnswered = false;
+let gameActive = false;
+const MAX_ROUNDS = 5; // Total rounds to play
+let currentRound = 0;
 
 // --- 3. HELPER FUNCTIONS ---
 
-/** Shuffles the elements of an array in place (Fisher-Yates algorithm). */
+/** Shuffles an array in place using the Fisher-Yates algorithm. */
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
-    return array;
 }
 
 /** Updates the displayed score, streak, and attempts. */
@@ -66,29 +298,59 @@ function updateStats() {
     streakEl.textContent = streak;
 }
 
-/** Pre-populates the movie list in the <details> section. */
-function populateMovieList() {
-    movieListEl.innerHTML = MOVIE_POSTERS.map(movie => 
-        // Use the movie title instead of the image in the list preview
-        `<div>${movie.correct} (${movie.lang})</div>`
-    ).join('');
+/** Updates the round tracker circles in the header. */
+function updateRoundTracker() {
+    const circles = document.querySelectorAll('.round-circles .circle');
+    circles.forEach((circle, index) => {
+        circle.classList.remove('current');
+        circle.classList.remove('finished');
+
+        if (index === currentRound - 1) {
+            circle.classList.add('current');
+        } else if (index < currentRound - 1) {
+            circle.classList.add('finished');
+        }
+    });
 }
 
-/** Enables or disables option and control elements. */
-function toggleControls(enableOptions, enableNext) {
-    const options = optionsContainer.querySelectorAll('.option-btn');
-    options.forEach(btn => btn.disabled = !enableOptions);
+/** Renders the multiple choice buttons dynamically. */
+function renderOptions(options) {
+    optionsContainer.innerHTML = '';
     
-    // Only enable Reveal if options are enabled (i.e., question is active)
-    revealBtn.disabled = !enableOptions;
+    // Get the correct movie title and all other movie titles for incorrect options
+    const correctTitle = currentMovie.correct;
+    const allTitles = MOVIE_POSTERS.map(m => m.correct);
+    
+    // Filter out the correct title to get a pool of incorrect options
+    let incorrectPool = allTitles.filter(title => title !== correctTitle);
+    
+    // Shuffle the pool and select the first three (or fewer if not enough)
+    shuffleArray(incorrectPool);
+    const incorrectOptions = incorrectPool.slice(0, 3);
 
-    if (enableNext) {
-        nextBtn.classList.remove('disabled');
-        nextBtn.disabled = false;
-    } else {
-        nextBtn.classList.add('disabled');
-        nextBtn.disabled = true;
-    }
+    // Combine correct and incorrect options
+    let finalOptions = [...incorrectOptions, correctTitle];
+    shuffleArray(finalOptions);
+
+    finalOptions.forEach((optionText, index) => {
+        const button = document.createElement('button');
+        button.className = 'option-btn';
+        button.textContent = optionText;
+        button.dataset.answer = optionText;
+        button.dataset.index = index; // Used only for styling A, B, C, D if needed
+
+        // Event listener for the user's guess
+        button.addEventListener('click', () => handleGuess(optionText));
+
+        optionsContainer.appendChild(button);
+    });
+}
+
+/** Enables or disables all option buttons. */
+function toggleOptions(enabled) {
+    document.querySelectorAll('.option-btn').forEach(btn => {
+        btn.disabled = !enabled;
+    });
 }
 
 /** Resets timer visually and stops the interval. */
@@ -99,259 +361,229 @@ function stopTimer(reset = true) {
         timeFillEl.style.width = '100%';
         timeLeftEl.style.color = 'var(--color-success)';
     }
+    // Remove the long transition property to allow instant reset
+    timeFillEl.style.transition = 'none';
 }
 
 /** Starts the countdown timer. */
 function startTimer() {
-    stopTimer();
+    stopTimer(); // Clear any existing timer
     let currentTime = timeLimit;
 
-    // Reset bar transition for the new countdown
-    timeFillEl.style.transition = 'none';
-    timeFillEl.style.width = '100%';
-    timeLeftEl.style.color = 'var(--color-success)';
-
-    // Set transition duration right before starting the countdown
+    // Set width transition to full 0 to 100% over the time limit
+    // We add a small delay and re-apply transition to enable a smooth reset
     setTimeout(() => {
         timeFillEl.style.transition = `width ${timeLimit}s linear`;
         timeFillEl.style.width = '0%';
     }, 50); 
     
-    // Update text and color every second
+    timeLeftEl.textContent = `${currentTime}s`;
+
     timer = setInterval(() => {
         currentTime--;
         timeLeftEl.textContent = `${currentTime}s`;
 
+        // Change color based on time remaining
         if (currentTime <= 5) {
             timeLeftEl.style.color = 'var(--color-secondary)'; // Red/Orange
+        } else {
+            timeLeftEl.style.color = 'var(--color-success)'; // Green
         }
-
+        
         if (currentTime <= 0) {
             handleTimeout();
         }
     }, 1000);
 }
 
-/** Handles the game end or transition to the next state. */
-function finishRound() {
-    round++;
-    if (round > NUM_ROUNDS) {
-        handleGameOver();
-    } else {
-        // Update round marker
-        roundCircles.forEach((circle, index) => {
-            circle.classList.remove('current');
-            if (index + 1 === round) {
-                circle.classList.add('current');
-            }
-        });
-        loadQuestion();
-    }
-}
-
-/** Generates and shuffles options for the current movie. */
-function renderOptions() {
-    optionsContainer.innerHTML = '';
-    
-    // 1. Get the correct answer
-    const correctAnswer = currentMovie.correct;
-    
-    // 2. Collect all incorrect options (all other movie titles)
-    const incorrectOptionsPool = MOVIE_POSTERS
-        .map(movie => movie.correct) // Get all titles
-        .filter(title => title !== correctAnswer); // Exclude the correct answer
-        
-    const NUM_INCORRECT_OPTIONS = 3;
-    let finalOptions = [correctAnswer]; // Start with the correct answer
-    
-    // 3. Shuffle the pool and select the required number of incorrect options
-    shuffleArray(incorrectOptionsPool);
-    const selectedIncorrectOptions = incorrectOptionsPool.slice(0, NUM_INCORRECT_OPTIONS);
-    
-    // 4. Combine and shuffle the final list of 4 options
-    finalOptions.push(...selectedIncorrectOptions);
-    shuffleArray(finalOptions); // Shuffle the final array to randomize the position of the correct answer
-
-    // 5. Render the buttons
-    finalOptions.forEach(title => {
-        const button = document.createElement('button');
-        button.classList.add('option-btn');
-        button.textContent = title;
-        button.setAttribute('data-value', title);
-        button.type = 'button';
-        button.addEventListener('click', handleGuess);
-        optionsContainer.appendChild(button);
-    });
-}
 
 // --- 4. GAME LOGIC ---
 
-/** Selects and displays a new movie poster and options. */
+/** Logic for when the timer runs out. */
+function handleTimeout() {
+    stopTimer(false);
+    attempts++;
+    streak = 0;
+    updateStats();
+    
+    // Visually show the correct answer
+    showResult(false);
+
+    feedbackArea.className = 'feedback incorrect';
+    feedbackArea.innerHTML = `Time up! The correct answer was <strong>${currentMovie.correct}</strong>.`;
+    
+    toggleOptions(false);
+    nextBtn.classList.remove('disabled');
+    nextBtn.disabled = false;
+}
+
+/** Loads and displays a new random movie poster and options. */
 function loadQuestion() {
-    stopTimer();
-    questionAnswered = false;
-    feedbackArea.textContent = 'Click an option to submit your answer.';
-    feedbackArea.className = 'feedback';
-    
-    if (availableMovies.length === 0) {
-        // Reset available movies if all were used (in case of extension beyond initial 5 rounds)
-        availableMovies = [...MOVIE_POSTERS];
+    if (currentRound >= MAX_ROUNDS) {
+        endGame();
+        return;
     }
+    currentRound++;
+    updateRoundTracker();
+
+    // Reset controls and feedback
+    toggleOptions(true);
+    nextBtn.classList.add('disabled');
+    nextBtn.disabled = true;
+    revealBtn.disabled = false;
+    feedbackArea.className = 'feedback';
+    feedbackArea.textContent = 'Click an option to submit your answer.';
+
+    // 1. Select a random movie
+    const remainingMovies = MOVIE_POSTERS.filter(m => m !== currentMovie);
+    shuffleArray(remainingMovies);
+    currentMovie = remainingMovies[0] || MOVIE_POSTERS[0]; // Fallback just in case
+
+    // 2. Display the poster image
+    posterEl.innerHTML = '';
+    const img = document.createElement('img');
+    img.src = currentMovie.url;
+    img.alt = `Poster for ${currentMovie.correct}`;
+    img.className = 'actual-poster';
     
-    // Select a random movie and remove it from the available pool
-    const index = Math.floor(Math.random() * availableMovies.length);
-    currentMovie = availableMovies[index];
-    availableMovies.splice(index, 1);
-    
-    // Use an <img> tag for the poster element
-    // Note: The alt text is important for accessibility.
-    posterEl.innerHTML = `<img src="${currentMovie.url}" alt="Movie Poster" class="actual-poster">`; 
+    // --- CRITICAL IMAGE ERROR HANDLER ---
+    img.onerror = function() {
+        console.error("❌ IMAGE LOAD FAILED! Check the URL:", currentMovie.url);
+        // Fallback to text/emoji if image fails
+        posterEl.innerHTML = '<span style="font-size: 8rem;">❓</span>';
+        posterSubEl.textContent = 'Image failed to load. Check your URL in the console.';
+    };
+
+    posterEl.appendChild(img);
     posterSubEl.textContent = `Language: ${currentMovie.lang}`;
-    
-    renderOptions();
-    toggleControls(true, false);
+
+    // 3. Render the options and start the timer
+    renderOptions(currentMovie.options);
     startTimer();
 }
 
-/** Handles a user clicking one of the multiple-choice buttons. */
-function handleGuess(event) {
-    if (questionAnswered) return;
-    
+/** Handles user selecting an option. */
+function handleGuess(guessedTitle) {
     stopTimer(false);
-    questionAnswered = true;
-    attempts++;
-    
-    const selectedButton = event.target;
-    const guess = selectedButton.getAttribute('data-value');
-    const isCorrect = guess === currentMovie.correct;
 
-    // Mark all buttons as disabled after the first guess
-    toggleControls(false, true);
+    // Disable all options immediately after a guess
+    toggleOptions(false);
+    
+    const isCorrect = (guessedTitle.toLowerCase() === currentMovie.correct.toLowerCase());
+
+    attempts++;
 
     if (isCorrect) {
-        score += 100;
+        score += 10;
         streak++;
         feedbackArea.className = 'feedback correct';
-        feedbackArea.innerHTML = `✅ Correct! You earned 100 points.`;
-        selectedButton.classList.add('correct');
+        feedbackArea.innerHTML = `✅ Correct! Well done!`;
     } else {
         streak = 0;
         feedbackArea.className = 'feedback incorrect';
-        feedbackArea.innerHTML = `❌ Incorrect. The correct movie was <strong>${currentMovie.correct}</strong>.`;
-        selectedButton.classList.add('incorrect');
-        
-        // Highlight the correct answer
-        optionsContainer.querySelectorAll('.option-btn').forEach(btn => {
-            if (btn.getAttribute('data-value') === currentMovie.correct) {
-                btn.classList.add('correct');
-            }
-        });
+        feedbackArea.innerHTML = `❌ Incorrect. The correct film was <strong>${currentMovie.correct}</strong>.`;
     }
 
+    // Visually show the result (highlight correct/incorrect)
+    showResult(isCorrect, guessedTitle);
+    
     updateStats();
+    nextBtn.classList.remove('disabled');
+    nextBtn.disabled = false;
 }
 
-/** Reveals the answer if the user can't guess in time or chooses to reveal. */
+/** Visually highlights the correct/incorrect answer on the buttons. */
+function showResult(guessedCorrectly, guessedTitle = null) {
+    document.querySelectorAll('.option-btn').forEach(btn => {
+        btn.disabled = true;
+
+        if (btn.dataset.answer.toLowerCase() === currentMovie.correct.toLowerCase()) {
+            btn.classList.add('correct');
+        } else if (!guessedCorrectly && btn.dataset.answer.toLowerCase() === guessedTitle?.toLowerCase()) {
+            btn.classList.add('incorrect');
+        }
+    });
+    revealBtn.disabled = true;
+}
+
+/** Reveals the answer without a guess (counts as a miss). */
 function handleReveal() {
-    if (questionAnswered) return;
-    
     stopTimer(false);
-    questionAnswered = true;
-    attempts++;
-    streak = 0;
-    
-    toggleControls(false, true);
-    updateStats();
-    
-    feedbackArea.className = 'feedback incorrect';
-    feedbackArea.innerHTML = `Time was remaining but you revealed. The answer was <strong>${currentMovie.correct}</strong>.`;
-    
-    // Highlight the correct answer
-    optionsContainer.querySelectorAll('.option-btn').forEach(btn => {
-        if (btn.getAttribute('data-value') === currentMovie.correct) {
-            btn.classList.add('correct');
-        }
-    });
-}
-
-/** Logic for when the timer runs out. */
-function handleTimeout() {
-    if (questionAnswered) return;
-
-    stopTimer(false);
-    questionAnswered = true;
     attempts++;
     streak = 0;
     updateStats();
-
-    feedbackArea.className = 'feedback incorrect';
-    feedbackArea.innerHTML = `Time up! The correct movie was <strong>${currentMovie.correct}</strong>.`;
+    showResult(false);
     
-    // Highlight the correct answer
-    optionsContainer.querySelectorAll('.option-btn').forEach(btn => {
-        if (btn.getAttribute('data-value') === currentMovie.correct) {
-            btn.classList.add('correct');
-        }
-    });
-
-    toggleControls(false, true);
+    feedbackArea.className = 'feedback incorrect';
+    feedbackArea.innerHTML = `Skipped. The correct film was <strong>${currentMovie.correct}</strong>.`;
+    
+    toggleOptions(false);
+    nextBtn.classList.remove('disabled');
+    nextBtn.disabled = false;
 }
 
-/** Handles the end of the game (after the final round). */
-function handleGameOver() {
+/** Displays the final score screen. */
+function endGame() {
     stopTimer(true);
-    feedbackArea.className = 'feedback';
-    feedbackArea.innerHTML = `<h2>Game Over!</h2>Your final score is <strong>${score}</strong> out of ${NUM_ROUNDS * 100}.`;
-    
-    // Hide controls and options
-    optionsContainer.innerHTML = '';
-    nextBtn.style.display = 'none';
-    revealBtn.style.display = 'none';
-    posterSubEl.textContent = 'Click "Start Quiz" to play again.';
-    
-    // Re-show the start button logic
-    setTimeout(() => {
-        startButton.textContent = 'Play Again';
-        coverPage.classList.remove('hidden');
-    }, 2000);
+    posterEl.innerHTML = '<span style="font-size: 8rem;">🏆</span>';
+    posterSubEl.textContent = 'Game Over!';
+    optionsContainer.innerHTML = `<p style="text-align:center; font-size:1.2rem;">You scored ${score} points in ${MAX_ROUNDS} rounds!</p>`;
+    feedbackArea.textContent = 'Press NEXT to start a new game.';
+
+    nextBtn.textContent = 'Play Again';
+    nextBtn.classList.remove('disabled');
+    nextBtn.disabled = false;
+    revealBtn.disabled = true;
+}
+
+/** Resets all game variables and restarts the quiz. */
+function resetGame() {
+    score = 0;
+    streak = 0;
+    attempts = 0;
+    currentRound = 0;
+    currentMovie = null;
+    nextBtn.textContent = 'Next Question ▶';
+    updateStats();
+    updateRoundTracker();
+    loadQuestion();
+}
+
+/** Pre-populates the movie list in the <details> section. */
+function populateMovieList() {
+    movieListEl.innerHTML = MOVIE_POSTERS.map(movie => 
+        `<div><img src="${movie.url}" style="width: 20px; height: auto; margin-right: 5px; border-radius: 3px;" onerror="this.src='https://placehold.co/20x30/333/fff?text=?'" /> <strong>${movie.correct}</strong> (${movie.lang})</div>`
+    ).join('');
 }
 
 // --- 5. INITIALIZATION & EVENT LISTENERS ---
 
-function initializeGame() {
-    // Reset State
-    availableMovies = [...MOVIE_POSTERS];
-    score = 0;
-    streak = 0;
-    attempts = 0;
-    round = 1;
+/** Initializes the application after the document loads. */
+function initApp() {
+    populateMovieList();
 
-    // Reset Round Circles
-    roundCircles.forEach((circle, index) => {
-        circle.classList.remove('current');
-        if (index === 0) {
-            circle.classList.add('current');
+    // 1. Cover Page / Start Button Logic
+    startButton.addEventListener('click', () => {
+        // Hide the cover page
+        coverPage.classList.add('hidden');
+        // Show the quiz container
+        quizContainer.classList.remove('hidden'); 
+        
+        gameActive = true;
+        resetGame(); // Start the first round
+    });
+
+    // 2. Quiz Controls
+    nextBtn.addEventListener('click', () => {
+        if (nextBtn.textContent === 'Play Again') {
+            resetGame();
+        } else {
+            loadQuestion();
         }
     });
     
-    updateStats();
-    nextBtn.style.display = 'block';
-    revealBtn.style.display = 'block';
-    loadQuestion();
+    revealBtn.addEventListener('click', handleReveal);
 }
 
-// Event listeners
-startButton.addEventListener('click', () => {
-    coverPage.classList.add('hidden');
-    initializeGame();
-});
-
-nextBtn.addEventListener('click', finishRound);
-revealBtn.addEventListener('click', handleReveal);
-
-// Initial setup
-window.onload = () => {
-    populateMovieList();
-    // Hide the quiz container initially, waiting for the start button click
-    // Note: The cover page CSS handles hiding the quiz content
-};
+// Ensure the app starts when the page structure is ready
+document.addEventListener('DOMContentLoaded', initApp)
