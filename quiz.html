@@ -3,69 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poster Movie Guessing Quiz</title>
+    <title>🎬 Poster Movie Guessing Quiz</title>
+    <!-- Ensure this links to your updated CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
-
-        <h1 id="headerTitle">🎬 Poster Movie Guessing — Kannada / Hindi / Telugu</h1>
-        <p id="headerNote">
-            15 seconds per movie. If your guess is incorrect, the correct answer will be shown immediately.
-        </p>
-
-        <!-- Stats -->
-        <div class="stats">
-            <div class="stat"><div class="label">Score</div><div id="score">0</div></div>
-            <div class="stat"><div class="label">Streak</div><div id="streak">0</div></div>
-            <div class="stat"><div class="label">Attempts</div><div id="attempts">0</div></div>
+    <!-- Cover Page Structure (You mentioned you have this, but keeping the structure for completeness) -->
+    <div id="coverPage" class="cover-page">
+        <div class="cover-container">
+            <h1>🎬 Poster Movie Guessing Quiz</h1>
+            <p>Test your knowledge of South Asian cinema!</p>
+            <button id="startButton" class="start-btn">Start Quiz</button>
         </div>
+    </div>
+    
+    <!-- MAIN QUIZ LAYOUT - Uses the new grid/flex structure from the CSS -->
+    <main class="quiz-app-layout" id="quizContainer">
+        
+        <!-- TOP BAR / HEADER (Score, Round Tracker, Settings Icon) -->
+        <header class="top-bar">
+            <div class="top-item round-tracker">
+                <span class="label">Round</span>
+                <div class="round-circles">
+                    <!-- These will be dynamically updated by JS -->
+                    <span class="circle current">1</span> 
+                    <span class="circle">2</span>
+                    <span class="circle">3</span>
+                    <span class="circle">4</span>
+                    <span class="circle">5</span>
+                </div>
+            </div>
+            
+            <div class="top-item score-display">
+                <span class="label">Score</span>
+                <span id="score" class="value">0</span>
+            </div>
 
-        <!-- Game area -->
-        <div class="game-area">
+            <!-- Placeholder for additional icons/settings -->
+            <div class="icon-group">
+                <i class="icon-btn">⚙️</i>
+            </div>
+        </header>
 
-            <div class="poster-section">
+        <!-- MAIN CONTENT AREA: Poster (left) and Controls/Options (right) -->
+        <div class="content-wrapper">
+
+            <!-- LEFT PANEL: MOVIE POSTER & TIMER -->
+            <div class="poster-panel">
                 <div id="poster" class="poster">🎬</div>
-                <div id="posterSub" class="poster-sub">Emoji poster — guess the movie</div>
+                <p id="posterSub" class="poster-sub">Emoji poster — guess the movie</p>
+                
+                <!-- Timer placed visually under the poster -->
+                <div class="timer-card">
+                    <div class="timer-info">
+                        <span>Time Left:</span>
+                        <span id="timeLeft" class="time-value">15s</span>
+                    </div>
+                    <div class="bar"><div id="timeFill"></div></div>
+                </div>
             </div>
 
-            <div class="guess-section">
-                <label>Your guess</label>
-                <input id="guessInput" type="text" placeholder="Type movie title (e.g., KGF / Baahubali)">
+            <!-- RIGHT PANEL: OPTIONS AND FEEDBACK -->
+            <div class="controls-panel">
                 
-                <!-- Timer -->
-                <div class="timer">
-                    <span id="timeLeft">15s</span>
-                    <div class="bar">
-                        <div id="timeFill"></div>
-                    </div>
+                <h2 class="panel-title">Choose the Movie Title</h2>
+                
+                <!-- Options / Multiple Choice Section -->
+                <div id="optionsContainer" class="options-grid">
+                    <!-- These are static placeholders. JS will populate the real options. -->
+                    <button class="option-btn" data-value="placeholder_A" type="button">Option A: Movie Title Example</button>
+                    <button class="option-btn" data-value="placeholder_B" type="button">Option B: Another Movie Title</button>
+                    <button class="option-btn" data-value="placeholder_C" type="button">Option C: Third Title Guess</button>
+                    <button class="option-btn" data-value="placeholder_D" type="button">Option D: Final Option Here</button>
+                </div>
+                
+                <!-- Feedback and Next Button -->
+                <div id="feedbackArea" class="feedback">Click an option to submit your answer.</div>
+                
+                <div class="control-actions">
+                    <!-- nextBtn starts disabled -->
+                    <button id="nextBtn" class="btn primary disabled" disabled type="button">Next Question ▶</button>
+                    <button id="revealBtn" class="btn secondary" type="button">Reveal Answer</button>
                 </div>
 
-                <div class="btn-row">
-                    <button id="guessBtn" class="btn primary">Submit Guess</button>
-                    <button id="revealBtn" class="btn">Reveal</button>
-                    <button id="nextBtn" class="btn">Next ▶</button>
-                    <button id="shuffleBtn" class="btn">🔀 Shuffle</button>
+                <!-- Footer Stats -->
+                <div class="footer-stats">
+                    <div class="stat"><div class="label">Attempts</div><div id="attempts">0</div></div>
+                    <div class="stat"><div class="label">Streak</div><div id="streak">0</div></div>
                 </div>
 
-                <div id="feedbackArea" class="feedback"></div>
-
-                <p class="info">
-                    Matches are case-insensitive. English transliterations (KGF, Baahubali, RRR, etc.) are accepted.
-                </p>
             </div>
 
         </div>
 
-        <!-- ▼ Movie list -->
+        <!-- Movie list (Kept at the bottom) -->
         <details class="list-box">
             <summary>Show movie list (emoji poster → title → language)</summary>
             <div id="movieList" class="movie-list"></div>
         </details>
 
-    </div>
+    </main>
 
     <!-- Load JavaScript -->
     <script src="quiz.js"></script>
